@@ -1,0 +1,49 @@
+//4-Desarrolla una función llamada invertirNumero que tome 
+// un número como parámetro y devuelva el número invertido. 
+// Por ejemplo, si se pasa el número 123, la función debería
+// devolver 321. Utiliza un ciclo for para invertir el número.
+
+vamos a analizar el bucle for paso a paso:
+
+Inicialización: La parte let i = numeroString.length - 1; es la inicialización del bucle. 
+Aquí estamos declarando una variable i que actuará como nuestro índice de iteración. numeroString.length devuelve la longitud de la cadena numeroString, 
+que es la representación en cadena del número original. Restamos 1 porque los índices de los caracteres en una cadena comienzan desde 0, por lo tanto, 
+queremos iniciar i en la posición del último dígito del número.
+
+Condición de finalización: La parte i >= 0 es la condición que debe cumplirse para que el bucle continúe ejecutándose. Mientras i sea mayor o igual a 0, 
+el bucle seguirá ejecutándose. Esto significa que recorreremos todos los dígitos de derecha a izquierda hasta llegar al primer dígito.
+
+Iteración: En cada iteración del bucle, i se decrementa en uno (i--). Esto significa que estamos moviéndonos de derecha a izquierda a lo largo de la 
+cadena numeroString, lo que nos permite acceder a cada dígito en orden inverso.
+
+Cuerpo del bucle: Dentro del bucle, const digito = parseInt(numeroString[i]); obtiene el carácter en la posición i de la cadena numeroString y lo convierte 
+en un número entero utilizando parseInt(). Esto nos da el dígito correspondiente en esa posición de la cadena.
+
+Actualización: No hay una actualización explícita dentro del bucle, ya que la actualización (i--) se maneja en la sección de iteración.
+
+En resumen, este bucle for itera sobre los dígitos del número original de derecha a izquierda, convirtiendo cada carácter de la cadena a un número entero y 
+construyendo el número invertido en cada iteración. Una vez que hemos invertido todos los dígitos, el bucle termina y se devuelve el número invertido.
+
+
+ la variable numeroInvertido se utiliza para almacenar el número invertido a medida que se recorren los dígitos del número original en el bucle for. 
+ Aquí está el funcionamiento de la variable numeroInvertido dentro del bucle: 
+Inicialización: Antes de entrar en el bucle for, la variable numeroInvertido se inicializa en 0. Esto se hace para asegurarse de que esté lista para almacenar
+ los dígitos invertidos del número.
+
+Actualización en cada iteración: En cada iteración del bucle for, se toma el dígito actual obtenido de la cadena numeroString y se agrega a numeroInvertido. 
+Esto se hace multiplicando el valor actual de numeroInvertido por 10 y luego sumándole el dígito actual.
+
+Por ejemplo, si el número original es 123 y estamos en la primera iteración del bucle, el primer dígito obtenido es 3. En este punto, numeroInvertido es 0. 
+Entonces, para almacenar este dígito, multiplicamos numeroInvertido por 10, que sigue siendo 0, y luego le sumamos el dígito actual, que es 3. Por lo tanto, 
+después de la primera iteración, numeroInvertido se convierte en 3.
+
+En la siguiente iteración, obtenemos el siguiente dígito, que es 2. Ahora, numeroInvertido (que era 3) se multiplica por 10, lo que da 30, y luego se le 
+suma el dígito actual, que es 2. Por lo tanto, numeroInvertido se convierte en 32.
+
+Este proceso se repite para todos los dígitos del número original, construyendo así el número invertido en numeroInvertido.
+
+Valor final: Una vez que el bucle for ha terminado de recorrer todos los dígitos del número original, numeroInvertido contendrá el número invertido completo. 
+Este valor se devuelve al final de la función.
+
+En resumen, numeroInvertido actúa como un acumulador que almacena los dígitos invertidos del número original a medida que se recorren en el bucle for. 
+Cada dígito se agrega al número invertido en la posición adecuada utilizando la aritmética de base 10.
